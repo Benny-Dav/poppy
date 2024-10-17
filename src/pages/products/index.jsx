@@ -8,9 +8,9 @@ const Products = () => {
     const fetchData = async ()=> {
         
        try {
-        // const products = await apiGetProducts();
-         products = [{name:"strapless bra", slug:"1-e"},
-            {name:"sneakers", slug:"2-s"}];
+        const products = await apiGetProducts();
+        //  products = [{name:"strapless bra", slug:"1-e"},
+        //     {name:"sneakers", slug:"2-s"}];
         console.log("Products: ", products);
         return products;
 

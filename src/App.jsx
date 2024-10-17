@@ -9,6 +9,7 @@ import Settings from './pages/Dashboard/Settings';
 import GithubLayout from './layouts/GithubLayout';
 import Repositories from './pages/Dashboard/Repositories';
 import Products from './pages/products';
+import Counter from './pages/Counter';
 
 
 function App() {
@@ -24,6 +25,10 @@ function App() {
     {
       path:"/products",
       element:<Products/>
+    },
+    {
+      path:"/counter",
+      element:<Counter/>
     },
     {
       path:"/dashboard",
