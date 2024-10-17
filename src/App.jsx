@@ -8,6 +8,8 @@ import Overview from './pages/Dashboard/Overview';
 import Settings from './pages/Dashboard/Settings';
 import GithubLayout from './layouts/GithubLayout';
 import Repositories from './pages/Dashboard/Repositories';
+import Products from './pages/products';
+
 
 function App() {
   const router = createBrowserRouter([
@@ -18,6 +20,10 @@ function App() {
     {
       path:"/about",
       element:<About/>
+    },
+    {
+      path:"/products",
+      element:<Products/>
     },
     {
       path:"/dashboard",
