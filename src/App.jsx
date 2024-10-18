@@ -10,54 +10,60 @@ import GithubLayout from './layouts/GithubLayout';
 import Repositories from './pages/Dashboard/Repositories';
 import Products from './pages/products';
 import Counter from './pages/Counter';
+import Counter2 from './pages/Counter2';
 
 
 function App() {
   const router = createBrowserRouter([
     {
-      path:"/",
-      element:<Home/>,
+      path: "/",
+      element: <Home />,
     },
     {
-      path:"/about",
-      element:<About/>
+      path: "/about",
+      element: <About />
     },
     {
-      path:"/products",
-      element:<Products/>
+      path: "/products",
+      element: <Products />
     },
     {
-      path:"/counter",
-      element:<Counter/>
+      path: "/counter",
+      element: <Counter />
     },
-    {
-      path:"/dashboard",
-      element:<DashboardLayout/>,
-      children:[
-        {
-          index:true,//makes overview the default page showing when '/dashboard' is opened
-          element:<Overview/>
-        },
-        {
-          path:"settings",
-          element:<Settings/>
-        },
-        {
-          path:"github",
-          element:<GithubLayout/>,
-          children:[
-            {
-              index:true,
-              element:<Repositories/>
-            }
-          ]
-        }
 
-      ]
+    {
+      path: "/counter2",
+      element: <Counter2 />
+    },
+    {
+    path: "/dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        index: true,//makes overview the default page showing when '/dashboard' is opened
+        element: <Overview />
+      },
+      {
+        path: "settings",
+        element: <Settings />
+      },
+      {
+        path: "github",
+        element: <GithubLayout />,
+        children: [
+          {
+            index: true,
+            element: <Repositories />
+          }
+        ]
+      }
+
+    ]
     },
   ])
 
- return <RouterProvider router={router}/>
+return <RouterProvider router={router} />
 }
 
 export default App;
